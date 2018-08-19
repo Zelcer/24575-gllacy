@@ -253,18 +253,27 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Введите свой логин и пароль</h2>
       <form class="form-modal" action="#" method="POST">
-        <input type="email" name="email" placeholder="Электронная почта">
-        <input type="password" name="password" placeholder="Пароль">
+        <div class="input-modal">
+          <label class="visually-hidden" for="user-email">Электронная почта</label>
+          <input id="user-email" type="email" name="email" placeholder="Электронная почта">
+        </div>
+        <div class="input-modal">
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input id="user-password" type="password" name="password" placeholder="Пароль">
+        </div>
         <input class="btn" type="submit" value="Войти">
       </form>
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
+      <p class="login-password-info">
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </p>
     </section>
 
     <section class="modal madal-search">
       <h2 class="visually-hidden">Введите поисковой запрос</h2>
       <form class="form-modal" action="#" method="POST">
-        <input type="text" name="search" placeholder="Что ищем?">
+        <label class="visually-hidden" for="input-search">Поиск</label>
+        <input id="input-search" type="text" name="search" placeholder="Что ищем?">
         <input class="visually-hidden" type="submit" value="Найти">
       </form>
     </section>
