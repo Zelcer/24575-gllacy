@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси сливочное мороженое</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -39,7 +42,7 @@
       <ul class="breadcrumbs">
         <li class="breadcrumb-item"><a href="index.html">Главная &#187;</a></li>
         <li class="breadcrumb-item"><a href="#">Каталог &#187;</a></li>
-        <li class="breadcrumb-item breacrumb-item-current"><a>Сливочное</a></li>
+        <li class="breadcrumb-item breadcrumb-item-current"><a>Сливочное</a></li>
       </ul>
 
       <h1 class="container-title">Сливочное мороженое</h1>
@@ -59,9 +62,9 @@
 
           <fieldset class="filter-form-group">
             <legend class="filter-form-caption">Цена:</legend>
-            <input type="text" name="starting-price" id="price-from">
+            <input type="text" name="starting-price" id="price-from" placeholder="100">
             <label for="price-from">руб. -</label>
-            <input type="text" name="final-price" id="price-up-to">
+            <input type="text" name="final-price" id="price-up-to" placeholder="500">
             <label for="price-up-to">руб.</label>
             <div class="range">
               <div class="white-circle"></div>
@@ -260,7 +263,7 @@
 
       <nav class="footer-menu">
         <ul class="footer-menu-list">
-          <li class="footer-menu-item"><a href="#">Для поставщиков</a></li>
+          <li class="footer-menu-item love"><a href="#">Для поставщиков</a></li>
           <li class="footer-menu-item"><a href="#">О производстве</a></li>
         </ul>
 
@@ -272,7 +275,7 @@
 
       <div class="copyright">
         <a class="html=academy=logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
-        <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
+        <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
       </div>
     </footer>
 

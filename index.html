@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -41,17 +44,17 @@
         <div class="slide">
           <img src="img/png/slide-1.png" alt="Мороженое крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
           <p class="carousel-title">Крем-брюле и пломбир с малиновым джемом</p>
-          <a class="btn btn-corousel" href="#">Давайте оба!</a>
+          <a class="btn btn-carousel" href="#">Давайте оба!</a>
         </div>
         <div class="slide">
           <img src="img/png/slide-2.png" alt="Мороженое шоколадный пломбир и лимонный сорбет" width="1065" height="859">
           <p class="carousel-title">Шоколадный пломбир и лимонный сорбет </p>
-          <a class="btn btn-corousel" href="#">Давайте оба!</a>
+          <a class="btn btn-carousel" href="#">Давайте оба!</a>
         </div>
         <div class="slide">
           <img src="img/png/slide-3.png" alt="Мороженое пломбир с помадкой и клубничный щербет" width="1079" height="854">
           <p class="carousel-title">Пломбир с помадкой и клубничный щербет</p>
-          <a class="btn btn-corousel" href="#">Давайте оба!</a>
+          <a class="btn btn-carousel" href="#">Давайте оба!</a>
         </div>
         <ul class="carousel-list">
           <li class="carousel-item"><input class="control-slider" type="radio" name="control" checked></li>
@@ -61,12 +64,12 @@
       </section>
 
       <section class="block banners">
-        <div class="banner">
+        <div class="banner banner-raspberry">
           <h2 class="banner-title">Малинка даром!</h2>
           <p class="banner-desc">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="btn" href="#">Хочу варенье!</a>
         </div>
-        <div class="banner">
+        <div class="banner banner-choco">
           <h2 class="banner-title">Шоколадки даром!</h2>
           <p class="banner-desc">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="btn" href="#">Хочу шоколадки!</a>
@@ -173,7 +176,7 @@
 
       <nav class="footer-menu">
         <ul class="footer-menu-list">
-          <li class="footer-menu-item"><a href="#">Для поставщиков</a></li>
+          <li class="footer-menu-item love"><a href="#">Для поставщиков</a></li>
           <li class="footer-menu-item"><a href="#">О производстве</a></li>
         </ul>
 
@@ -185,7 +188,7 @@
 
       <div class="copyright">
         <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
-        <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
+        <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
       </div>
     </footer>
 
@@ -229,8 +232,8 @@
           <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
         </div>
         <div class="input-modal">
-          <label class="visually-hidden" for="feedback-massage"></label>
-          <textarea id="feedback-massage" name="message" cols="30" rows="10">Напишите что-нибудь...</textarea>
+          <label class="visually-hidden" for="feedback-massage">Напишите нам сообщение</label>
+          <textarea id="feedback-massage" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
         </div>
         <input class="btn" type="submit" value="Отправить">
       </form>
