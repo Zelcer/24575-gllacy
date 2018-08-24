@@ -46,18 +46,12 @@ a {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.form-modal input[type="email"],
-.form-modal input[type="password"],
-.form-modal input[type="text"],
-.form-modal textarea {
+.modal-form-input {
   background-color: #ffffff;
   border: solid 1px rgba(178, 178, 178, 0.52);
 }
 
-.form-modal input[type="email"]:hover,
-.form-modal input[type="password"]:hover,
-.form-modal input[type="text"]:hover,
-.form-modal textarea:hover {
+.modal-form-input:hover {
   border: solid 2px rgba(154, 154, 154, 0.52);
 }
 
@@ -101,7 +95,7 @@ a {
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
-.menu-item-current a:not(.dropdown-item a) {
+.menu-item-current a {
   background-color: #d07058;
 }
 
@@ -124,6 +118,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   color: #323232;
+  background-color: #f8f7f4;
 }
 
 .dropdown-item-new {
@@ -193,8 +188,8 @@ a {
 
 /*--СТИЛИ ДЛЯ КАРУСЕЛИ--*/
 .carousel-title {
-  font-size: 59.5px;
-  line-height: 60.5px;
+  font-size: 60px;
+  line-height: 60px;
   text-align: center;
 }
 
