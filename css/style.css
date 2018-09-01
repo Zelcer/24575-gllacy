@@ -29,7 +29,7 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper {
-  min-width: 940px;
+  min-width: 900px;
   background-color: #849D8F;
   background-image: url("../img/png/slide-1.png");
   background-repeat: no-repeat;
@@ -557,11 +557,15 @@ a {
   width: 703px;
 }
 
-.filter-form fieldset {
+.filter-form-group {
   border: none;
 }
 
-.field-form legend {
+.input-range {
+  display: flex;
+}
+
+.field-form-group legend {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -975,7 +979,7 @@ a {
   padding-top: 20px;
   padding-right: 25px;
   padding-bottom: 27px;
-  padding-right: 24px;
+  padding-left: 24px;
 }
 
 .modal-feedback h2 {

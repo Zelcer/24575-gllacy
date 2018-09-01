@@ -67,16 +67,18 @@
               </fieldset>
 
               <fieldset class="filter-form-group">
-                <legend class="filter-form-caption">Цена:</legend>
-                <input type="text" name="starting-price" id="price-from" placeholder="100">
-                <label for="price-from">руб. -</label>
-                <input type="text" name="final-price" id="price-up-to" placeholder="500">
-                <label for="price-up-to">руб.</label>
-                <div class="range">
-                  <div class="white-circle"></div>
-                  <div class="white-circle"></div>
-                  <div class="transparent-line"></div>
-                  <div class="white-line"></div>
+                <div class="input-range">
+                  <legend class="filter-form-caption">Цена:</legend>
+                  <input type="text" name="starting-price" id="price-from" placeholder="100">
+                  <label for="price-from">руб. -</label>
+                  <input type="text" name="final-price" id="price-up-to" placeholder="500">
+                  <label for="price-up-to">руб.</label>
+                  <div class="range">
+                    <div class="white-circle"></div>
+                    <div class="white-circle"></div>
+                    <div class="transparent-line"></div>
+                    <div class="white-line"></div>
+                  </div>
                 </div>
               </fieldset>
 
@@ -304,7 +306,7 @@
             <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
           </div>
         </footer>
-
+      </div>
         <section class="modal modal-login">
           <h2 class="visually-hidden">Введите свой логин и пароль</h2>
             <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
@@ -382,7 +384,6 @@
           <p class="total-amount">Итого: 750 руб.</p>
           <a class="btn" href="#">Оформить заказ</a>
         </section>
-      </div>
     </div>
   </body>
 </html>
