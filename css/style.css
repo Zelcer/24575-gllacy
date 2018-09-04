@@ -165,7 +165,10 @@ a {
 
 .menu-list,
 .dropdown-menu,
-.user-list {
+.user-list,
+.popup-search,
+.popup-login,
+.popup-basket {
   margin: 0;
   padding: 0;
 
@@ -195,10 +198,9 @@ a {
 }
 
 .menu-item a::after {
-  display: block;
-
   content: "";
 
+  display: block;
   height: 1px;
 
   background-color: rgba(255, 255, 255, 0.4);
@@ -252,6 +254,7 @@ a {
 
   line-height: 16px;
 
+  box-sizing: border-box;
   border-radius: 5px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -316,6 +319,10 @@ a {
   margin-right: 10px;
 }
 
+.btn-user {
+  position: relative;
+}
+
 .btn-user a {
   display: block;
   padding: 10px 13px 10px 44px;
@@ -352,20 +359,30 @@ a {
   fill: #000000;
 }
 
+.popup-search {
+  position: absolute;
+  top: 37px;
+  right: 13px;
+
+  display: none;
+}
+
+.btn-search:hover .popup-search {
+  display: block;
+}
+
 .btn-login a {
   position: relative;
 }
 
 .btn-login a::before {
   position: absolute;
-
   top: 7px;
   left: 16px;
 
-  display: block;
-
   content: "";
 
+  display: block;
   width: 21px;
   height: 19px;
 
@@ -376,6 +393,19 @@ a {
 .btn-login a:hover::before {
   background-image: url("../img/svg/entrance-black.svg");
   background-repeat: no-repeat;
+}
+
+.popup-login {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  z-index: 1;
+
+  display: none;
+}
+
+.btn-login:hover .popup-login {
+  display: block;
 }
 
 .btn-basket a {
@@ -401,6 +431,19 @@ a {
 .btn-basket a:hover::before {
   background-image: url("../img/svg/basket-red.svg");
   background-repeat: no-repeat;
+}
+
+.popup-basket {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 1;
+
+  display: none;
+}
+
+.btn-basket:hover .popup-basket {
+  display: block;
 }
 
 .header-contacts {
@@ -619,19 +662,32 @@ a {
 .filter-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 880px;
+}
+
+.filter-form legend {
+  margin-left: 15px;
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
 }
 
 .filter-form-group:first-child {
   width: 194px;
+  margin-bottom: 15px;
 }
 
 .filter-form-group:nth-child(2) {
   width: 220px;
+  margin-bottom: 15px;
 }
 
 .filter-form-group:nth-child(3) {
   width: 415px;
+  margin-bottom: 15px;
 }
 
 .filter-form-group:nth-child(4) {
@@ -646,7 +702,7 @@ a {
 }
 
 .select {
-  padding: 14px 16px 10px 16px;
+  padding: 10px 16px 10px 16px;
 
   background-color: rgba(255,255,255,.3);
   border-radius: 25px;
@@ -669,6 +725,59 @@ a {
 
 .input-range {
   display: flex;
+  flex-direction: column;
+}
+
+.range {
+  position: relative;
+
+  padding: 10px 12px;
+  height: 21px;
+
+  background-color: rgba(255,255,255,.3);
+  border-radius: 25px;
+}
+
+.transparent-line {
+  position: absolute;
+  top: 17px;
+  left: 22px;
+
+  width: 175px;
+  height: 4px;
+
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.white-line {
+  position: absolute;
+  top: 17px;
+  left: 45px;
+
+  width: 107px;
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.white-circle {
+  position: absolute;
+  top: 8px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+}
+
+.circle-left {
+  left: 35px;
+}
+
+.circle-right {
+  left: 145px;
 }
 
 .field-form-group legend {
@@ -697,7 +806,7 @@ a {
 .radio {
   display: flex;
   justify-content: space-around;
-  padding: 7px 0 7px 20px;
+  padding: 10px 0 10px 20px;
 
   background-color: rgba(255,255,255,.3);
   border-radius: 25px;
@@ -752,7 +861,7 @@ input[type="radio"]:checked:focus + label::after {
 .checkbox {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0 9px 17px;
+  padding: 10px 0 10px 17px;
 
   background-color: rgba(255,255,255,.3);
   border-radius: 25px;
@@ -844,6 +953,19 @@ input[type="checkbox"]:checked + label::after {
   width: 267px;
 }
 
+.catalog-item::after {
+  position: absolute;
+  top: -5px;
+  left: -13px;
+
+  content: "";
+
+  width: 293px;
+  height: 405px;
+
+  border-radius: 5px;
+}
+
 .hit::before {
   position: absolute;
   top: 0;
@@ -859,7 +981,14 @@ input[type="checkbox"]:checked + label::after {
 
 .catalog-item:hover,
 .catalog-item:focus {
-  background-color: rgba(248, 247, 244, 0.2);
+  z-index: 10;
+}
+
+.catalog-item:hover::after,
+.catalog-item:focus::after {
+  z-index: 8;
+
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -890,6 +1019,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .catalog-item-desc {
+  z-index: 10;
+
   margin: 0;
   margin-bottom: 17px;
 
@@ -912,6 +1043,9 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .btn-catalog {
+  position: absolute;
+  left: 32px;
+
   display: none;
   width: 168px;
   padding: 13px 17px;
@@ -921,6 +1055,8 @@ input[type="checkbox"]:checked + label::after {
 
 .catalog-item:hover > .btn-catalog,
 .catalog-item:focus > .btn-catalog {
+  z-index: 10;
+
   display: block;
 }
 
@@ -1148,7 +1284,7 @@ input[type="checkbox"]:checked + label::after {
 
 .map-contacts {
   position: absolute;
-  top: -430px;
+  top: -395px;
   right: 27px;
 
   width: 252px;
@@ -1236,12 +1372,21 @@ input[type="checkbox"]:checked + label::after {
 .login-password-info a {
   display: block;
   width: 119px;
+  padding: 0;
 
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
   text-decoration: underline;
   color: #323232;
+}
+
+.login-password-info a::before {
+  background-image: none;
+}
+
+.login-password-info a:hover::before {
+  background-image: none;
 }
 
 .login-password-info a:hover,
@@ -1263,8 +1408,12 @@ input[type="checkbox"]:checked + label::after {
 
 /*--СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА ДЛЯ ФИДБЭКА--*/
 .modal-feedback {
-  position: relative;
+  position: fixed;
+  top: 250px;
+  left: 450px;
+  z-index: 30;
 
+  display: none;
   width: 429px;
   padding-top: 20px;
   padding-right: 25px;
@@ -1321,9 +1470,39 @@ input[type="checkbox"]:checked + label::after {
   border-bottom: 1px solid #cacac7;
 }
 
+.modal-table td {
+  padding-bottom: 15px;
+
+  vertical-align: middle;
+}
+
+.table-row td:first-child {
+  width: 11px;
+}
+
+.table-row td:nth-child(2) {
+  width: 33px;
+}
+
+.table-row td:nth-child(3) {
+  width: 216px;
+}
+
+.table-row td:nth-child(4) {
+  width: 100px;
+}
+
+.table-row td:nth-child(5) {
+  width: 50px;
+}
+
 .position-delete {
   background-color: transparent;
   border: none;
+}
+
+.table-img img {
+  border-radius: 50%;
 }
 
 .table-text {

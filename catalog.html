@@ -28,13 +28,106 @@
               <li class="menu-item"><a href="#">О Компании</a></li>
             </ul>
             <ul class="user-list">
-              <li class="btn-user btn-search"><a href="#"><span class="visually-hidden">Поиск</span>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-                  <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
-                </svg>
-              </a></li>
-              <li class="btn-user btn-login"><a href="#">Вход</a></li>
-              <li class="btn-user btn-basket btn-user-current"><a href="#">2 товара</a></li>
+              <li class="btn-user btn-search">
+                <a href="#"><span class="visually-hidden">Поиск</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+                    <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+                 </svg>
+                </a>
+                <ul class="popup-search">
+                  <li>
+                    <section class="modal modal-search">
+                      <h2 class="visually-hidden">Введите поисковой запрос</h2>
+                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                        <label class="visually-hidden" for="input-search">Поиск</label>
+                        <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
+                        <input class="visually-hidden" type="submit" value="Найти">
+                      </form>
+                    </section>
+                  </li>
+                </ul>
+              </li>
+              <li class="btn-user btn-login">
+                <a href="#">Вход</a>
+                <ul class="popup-login">
+                  <li>
+                    <section class="modal modal-login">
+                      <h2 class="visually-hidden">Введите свой логин и пароль</h2>
+                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                        <div class="input-modal">
+                          <label class="visually-hidden" for="user-email">Электронная почта</label>
+                          <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                        </div>
+                        <div class="input-modal">
+                          <label class="visually-hidden" for="user-password">Пароль</label>
+                          <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
+                        </div>
+                        <input class="btn login-btn" type="submit" value="Войти">
+                      </form>
+                      <p class="login-password-info">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                      </p>
+                    </section>
+                  </li>
+                </ul>
+              </li>
+              <li class="btn-user btn-basket btn-user-current">
+                <a href="#">2 товара</a>
+                <ul class="popup-basket">
+                  <li>
+                    <section class="modal modal-basket">
+                      <h2 class="visually-hidden">Содержимое корзины</h2>
+                      <table class="modal-table">
+                        <tr class="table-row">
+                          <td>
+                            <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                                <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+                              </svg>
+                            </button>
+                          </td>
+                          <td class="table-img">
+                            <img src="img/jpeg/product-basket-1.jpg" alt="Миниатюра пломбира с апельсиновым джемом" width="33" height="33">
+                          </td>
+                          <td class="table-text">
+                            Пломбир с апельсиновым джемом
+                          </td>
+                          <td class="table-text">
+                            1,5 кг х <span class="basket-price">200 руб.</span>
+                          </td>
+                          <td class="table-text">
+                            300 руб.
+                          </td>
+                        </tr>
+                        <tr class="table-row">
+                          <td>
+                            <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                                <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+                              </svg>
+                            </button>
+                          </td>
+                          <td class="table-img">
+                            <img src="img/jpeg/product-basket-2.jpg" alt="Миниатюра клубничного пломбира с присыпкой из белого шоколада" width="33" height="33">
+                          </td>
+                          <td class="table-text">
+                            Клубничный пломбир с присыпкой из белого шоколада
+                          </td>
+                          <td class="table-text">
+                            1,5 кг х <span class="basket-price">300 руб.</span>
+                          </td>
+                          <td class="table-text">
+                            450 руб.
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="total-amount">Итого: 750 руб.</p>
+                      <a class="btn btn-order" href="#">Оформить заказ</a>
+                    </section>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
 
@@ -72,16 +165,17 @@
 
               <fieldset class="filter-form-group">
                 <div class="input-range">
-                  <legend class="filter-form-caption">Цена:</legend>
-                  <input type="text" name="starting-price" id="price-from" placeholder="100">
-                  <label for="price-from">руб. -</label>
-                  <input type="text" name="final-price" id="price-up-to" placeholder="500">
-                  <label for="price-up-to">руб.</label>
+                  <legend class="filter-form-caption">Цена:
+                    <input type="text" name="starting-price" id="price-from" placeholder="100">
+                    <label for="price-from">руб. -</label>
+                    <input type="text" name="final-price" id="price-up-to" placeholder="500">
+                    <label for="price-up-to">руб.</label>
+                  </legend>
                   <div class="range">
-                    <div class="white-circle"></div>
-                    <div class="white-circle"></div>
                     <div class="transparent-line"></div>
                     <div class="white-line"></div>
+                    <div class="white-circle circle-left"></div>
+                    <div class="white-circle circle-right"></div>
                   </div>
                 </div>
               </fieldset>
@@ -383,83 +477,6 @@
           </div>
         </footer>
       </div>
-      <section class="modal modal-login">
-        <h2 class="visually-hidden">Введите свой логин и пароль</h2>
-        <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="input-modal">
-            <label class="visually-hidden" for="user-email">Электронная почта</label>
-            <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
-          </div>
-          <div class="input-modal">
-            <label class="visually-hidden" for="user-password">Пароль</label>
-            <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
-          </div>
-          <input class="btn login-btn" type="submit" value="Войти">
-        </form>
-        <p class="login-password-info">
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Новая регистрация</a>
-        </p>
-      </section>
-
-      <section class="modal modal-search">
-        <h2 class="visually-hidden">Введите поисковой запрос</h2>
-        <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-          <label class="visually-hidden" for="input-search">Поиск</label>
-          <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
-          <input class="visually-hidden" type="submit" value="Найти">
-        </form>
-      </section>
-
-      <section class="modal modal-basket">
-        <h2 class="visually-hidden">Содержимое корзины</h2>
-        <table class="modal-table">
-          <tr class="table-row">
-            <td>
-              <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                    <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
-                  </svg>
-              </button>
-            </td>
-            <td>
-              <img src="img/jpeg/product-basket-1.jpg" alt="Миниатюра пломбира с апельсиновым джемом" width="33" height="33">
-            </td>
-            <td class="table-text">
-              Пломбир с апельсиновым джемом
-            </td>
-            <td class="table-text">
-              1,5 кг х <span class="basket-price">200 руб.</span>
-            </td>
-            <td class="table-text">
-              300 руб.
-            </td>
-          </tr>
-          <tr class="table-row">
-            <td>
-              <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                  <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
-                </svg>
-              </button>
-            </td>
-            <td>
-              <img src="img/jpeg/product-basket-2.jpg" alt="Миниатюра клубничного пломбира с присыпкой из белого шоколада" width="33" height="33">
-            </td>
-            <td class="table-text">
-              Клубничный пломбир с присыпкой из белого шоколада
-            </td>
-            <td class="table-text">
-              1,5 кг х <span class="basket-price">300 руб.</span>
-            </td>
-            <td class="table-text">
-              450 руб.
-            </td>
-          </tr>
-        </table>
-        <p class="total-amount">Итого: 750 руб.</p>
-        <a class="btn btn-order" href="#">Оформить заказ</a>
-      </section>
     </div>
   </body>
 </html>
