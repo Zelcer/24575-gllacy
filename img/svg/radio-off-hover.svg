@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>radio-off</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+        <g id="Catalog-1200" transform="translate(-656.000000, -215.000000)" fill="#FFFFFF">
+            <g id="Фильтры" transform="translate(26.000000, 185.000000)">
+                <g id="Жирность" transform="translate(442.000000, 0.000000)">
+                    <g id="radio-off" transform="translate(188.000000, 30.000000)">
+                        <g id="Shape">
+                            <path d="M11,3.52 C15.12456,3.52 18.48,6.87544 18.48,11 C18.48,15.12456 15.12456,18.48 11,18.48 C6.87544,18.48 3.52,15.12456 3.52,11 C3.52,6.87544 6.87544,3.52 11,3.52 Z M11,0 C4.92536,0 0,4.92536 0,11 C0,17.07464 4.92536,22 11,22 C17.07464,22 22,17.07464 22,11 C22,4.92536 17.07464,0 11,0 Z" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
