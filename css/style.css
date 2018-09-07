@@ -157,6 +157,7 @@ a {
 .main-header {
   padding-top: 10px;
 }
+
 .main-nav{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,9 +250,9 @@ a {
   display: none;
 }
 
-.menu-item-current a:hover,
-.menu-item-current a:focus,
-.menu-item-current a:active {
+.menu-item-current > a:hover,
+.menu-item-current > a:focus,
+.menu-item-current > a:active {
   color: #ffffff;
 
   background-color: #d07058;
@@ -369,7 +370,7 @@ a {
   z-index: 20;
 }
 
-.btn-user a {
+.btn-user > a {
   display: block;
   padding: 7px 16px 9px 43px;
 
@@ -381,8 +382,14 @@ a {
   border-radius: 20px;
 }
 
-.btn-user:hover a,
-.btn-user:focus a {
+.btn-user:hover > a,
+.btn-user:focus > a {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+.btn-user-current > a {
   color: #323232;
 
   background-color: #f8f7f4;
@@ -489,6 +496,11 @@ a {
   background-repeat: no-repeat;
 }
 
+.btn-user-current > a::before {
+  background-image: url("../img/svg/basket-red.svg");
+  background-repeat: no-repeat;
+}
+
 .popup-basket {
   position: absolute;
   top: 40px;
@@ -503,6 +515,8 @@ a {
 }
 
 .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -733,7 +747,7 @@ a {
 
 /*--СТИЛИ ДЛЯ ФИЛЬТРА--*/
 .filter {
-  margin-bottom: 25px;
+  margin-bottom: 41px;
 }
 
 .filter-form {
@@ -745,7 +759,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 880px;
+  width: 865px;
 }
 
 .filter-form legend {
@@ -805,6 +819,13 @@ a {
           appearance: none;
 }
 
+.select select:hover,
+.select select:focus {
+  color: #323232;
+
+  background-image: url("../img/svg/icon-down-dir-hover.svg");
+}
+
 .input-range {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -833,9 +854,9 @@ a {
 .transparent-line {
   position: absolute;
   top: 17px;
-  left: 22px;
+  left: 19px;
 
-  width: 175px;
+  width: 174px;
   height: 4px;
 
   background-color: rgba(255, 255, 255, 0.4);
@@ -846,7 +867,7 @@ a {
   top: 17px;
   left: 45px;
 
-  width: 107px;
+  width: 103px;
   height: 4px;
 
   background-color: #ffffff;
@@ -862,14 +883,22 @@ a {
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.white-circle:hover {
+  top: 7px;
+
+  border-width: 9px;
 }
 
 .circle-left {
-  left: 35px;
+  left: 32px;
 }
 
 .circle-right {
-  left: 145px;
+  left: 130px;
 }
 
 .field-form-group legend {
@@ -1039,8 +1068,12 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 /*--СТИЛИ ДЛЯ КАТАЛОГА--*/
-.catalog {
+.catalog-hit {
   margin-bottom: 37px;
+}
+
+.catalog {
+  margin-bottom: 28px;
 }
 
 .catalog-list {
@@ -1059,7 +1092,11 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .creamy-catalog {
-  margin-bottom: 90px;
+  margin-bottom: 42px;
+}
+
+.creamy-catalog .catalog-item {
+  margin-bottom: 37px;
 }
 
 .catalog-item {
@@ -1085,6 +1122,10 @@ input[type="checkbox"]:checked + label:hover::before {
   margin-bottom: 10px;
 
   border-radius: 50%;
+}
+
+.catalog-img-item {
+  margin: 0;
 }
 
 .catalog-item-price {
@@ -1134,13 +1175,13 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .catalog-item .view {
   position: absolute;
-  top: 10px;
+  top: -7px;
   left: -10px;
 
   display: none;
 
   width: 287px;
-  height: 120%;
+  height: 125%;
 
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.3);
@@ -1149,7 +1190,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .btn-catalog {
   position: absolute;
-  bottom: 16px;
+  bottom: 15px;
   left: 45px;
 
   display: inline-block;
@@ -1184,6 +1225,38 @@ input[type="checkbox"]:checked + label:hover::before {
   list-style: none;
 }
 
+.pagination-item {
+  position: relative;
+}
+
+.pagination-prev::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  content: "";
+  display: block;
+  width: 9px;
+  height: 14px;
+
+  background-image: url("../img/svg/icon-left-small.svg");
+  background-repeat: no-repeat;
+}
+
+.pagination-next::before {
+  position: absolute;
+  top: 8px;
+  left: 19px;
+
+  content: "";
+  display: block;
+  width: 9px;
+  height: 14px;
+
+  background-image: url("../img/svg/icon-right-small.svg");
+  background-repeat: no-repeat;
+}
+
 .pagination-item a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1204,6 +1277,16 @@ input[type="checkbox"]:checked + label:hover::before {
 .pagination-item a:focus {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+}
+
+.pagination-item > .pagination-prev:hover,
+.pagination-item > .pagination-prev:focus {
+  background-color: transparent;
+}
+
+.pagination-item > .pagination-next:hover,
+.pagination-item > .pagination-next:focus {
+  background-color: transparent;
 }
 
 .pagination-item a:active {
@@ -1557,7 +1640,7 @@ input[type="checkbox"]:checked + label:hover::before {
 /*--СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА ДЛЯ ФИДБЭКА--*/
 .modal-feedback {
   position: fixed;
-  top: 250px;
+  top: 50px;
   left: 450px;
   z-index: 30;
 
@@ -1567,6 +1650,10 @@ input[type="checkbox"]:checked + label:hover::before {
   padding-right: 25px;
   padding-bottom: 27px;
   padding-left: 24px;
+}
+
+.modal-feedback-show {
+  display: block;
 }
 
 .modal-feedback h2 {

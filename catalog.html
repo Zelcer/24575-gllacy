@@ -167,14 +167,10 @@
                 <div class="input-range">
                   <div class="range-data">
                     <legend class="filter-form-caption">Цена:</legend>
-                    <label>
-                      <input type="text" name="starting-price" id="price-from" placeholder="100">
-                      руб. -
-                    </label>
-                    <label>
-                      <input type="text" name="final-price" id="price-up-to" placeholder="500">
-                      руб.
-                    </label>
+                    <label for="price-from">руб. -</label>
+                    <input type="text" name="starting-price" id="price-from" placeholder="100">
+                    <label for="price-up-to">руб.</label>
+                    <input type="text" name="final-price" id="price-up-to" placeholder="500">
                   </div>
                   <div class="range">
                     <div class="transparent-line"></div>
@@ -189,19 +185,19 @@
                 <legend class="filter-form-caption">Жирность</legend>
                 <div class="radio">
                   <div class="input-radio">
-                    <input type="radio" name="fatty" id="zero">
+                    <input class="filter-input" type="radio" name="fatty" id="zero">
                     <label for="zero">0%</label>
                   </div>
                   <div class="input-radio">
-                    <input type="radio" name="fatty" id="ten" checked>
+                    <input class="filter-input" type="radio" name="fatty" id="ten" checked>
                     <label for="ten">до 10%</label>
                   </div>
                   <div class="input-radio">
-                    <input type="radio" name="fatty" id="thirty">
+                    <input class="filter-input" type="radio" name="fatty" id="thirty">
                     <label for="thirty">до 30%</label>
                   </div>
                   <div class="input-radio">
-                    <input type="radio" name="fatty" id="more-thirty">
+                    <input class="filter-input" type="radio" name="fatty" id="more-thirty">
                     <label for="more-thirty">выше 30%</label>
                   </div>
                 </div>
@@ -211,23 +207,23 @@
                 <legend class="filter-form-caption">Наполнители:</legend>
                 <div class="checkbox">
                   <div class="input-checkbox">
-                    <input type="checkbox" name="chocolate-filler" id="chocolate" checked>
+                    <input class="filter-input" type="checkbox" name="chocolate-filler" id="chocolate" checked>
                     <label for="chocolate">шоколадные</label>
                   </div>
                   <div class="input-checkbox">
-                    <input type="checkbox" name="sugar-filler" id="sugar" checked>
+                    <input class="filter-input" type="checkbox" name="sugar-filler" id="sugar" checked>
                     <label for="sugar">сахарные присыпки</label>
                   </div>
                   <div class="input-checkbox">
-                    <input type="checkbox" name="fruit-filler" id="fruit">
+                    <input class="filter-input" type="checkbox" name="fruit-filler" id="fruit">
                     <label for="fruit">фрукты</label>
                   </div>
                   <div class="input-checkbox">
-                    <input type="checkbox" name="syrups-filler" id="syrups">
+                    <input class="filter-input" type="checkbox" name="syrups-filler" id="syrups">
                     <label for="syrups">сиропы</label>
                   </div>
                   <div class="input-checkbox">
-                    <input type="checkbox" name="jams-filler" id="jams">
+                    <input class="filter-input" type="checkbox" name="jams-filler" id="jams">
                     <label for="jams">джемы</label>
                   </div>
                 </div>
@@ -423,17 +419,13 @@
             </ul>
 
             <ul class="pagination-list">
-              <li class="pagination-item"><a href="#">
-
-              </a></li>
+              <li class="pagination-item"><a class="pagination-prev" href="#"></a></li>
               <li class="pagination-item pagination-item-current"><a>1</a></li>
               <li class="pagination-item"><a href="#">2</a></li>
               <li class="pagination-item"><a href="#">3</a></li>
               <li class="pagination-item"><a href="#">4</a></li>
               <li class="pagination-item"><a href="#">5</a></li>
-              <li class="pagination-item"><a href="#">
-
-              </a></li>
+              <li class="pagination-item"><a class="pagination-next" href="#"></a></li>
             </ul>
           </section>
         </main>

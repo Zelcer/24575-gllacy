@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-down-dir</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-529.000000, -2331.000000)" fill="#000000" fill-rule="nonzero" id="Фильтры,-пагинатор,-соцкнопки">
+            <g transform="translate(73.000000, 2238.000000)">
+                <g id="Сортировка-наведение" transform="translate(287.000000, 78.000000)">
+                    <g id="icon-down-dir" transform="translate(169.000000, 15.000000)">
+                        <polyline id="Shape" points="5.5 10 0 0 11 0"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
