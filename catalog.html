@@ -15,7 +15,7 @@
             <a class="main-header-logo" href="index.html"><img src="img/svg/logo.svg" alt="Логотип Gllacy" width="154" height="64"></a>
             <ul class="menu-list">
               <li class="menu-item menu-item-current">
-                <a href="#">Каталог</a>
+                <a class="menu-item-link" href="#">Каталог</a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-item dropdown-item-new"><a href="#">Новинки</a></li>
                   <li class="dropdown-item dropdown-item-current"><a>Сливочное</a></li>
@@ -24,8 +24,8 @@
                   <li class="dropdown-item"><a href="#">Мелорин</a></li>
                 </ul>
               </li>
-              <li class="menu-item"><a href="#">Доставка и оплата</a></li>
-              <li class="menu-item"><a href="#">О Компании</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="#">Доставка и оплата</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="#">О Компании</a></li>
             </ul>
             <ul class="user-list">
               <li class="btn-user btn-search">
@@ -35,96 +35,90 @@
                  </svg>
                 </a>
                 <ul class="popup-search">
-                  <li>
-                    <section class="modal modal-search">
-                      <h2 class="visually-hidden">Введите поисковой запрос</h2>
-                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-                        <label class="visually-hidden" for="input-search">Поиск</label>
-                        <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
-                        <input class="visually-hidden" type="submit" value="Найти">
-                      </form>
-                    </section>
+                  <li class="modal modal-search">
+                    <h2 class="visually-hidden">Введите поисковой запрос</h2>
+                    <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                      <label class="visually-hidden" for="input-search">Поиск</label>
+                      <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
+                      <input class="visually-hidden" type="submit" value="Найти">
+                    </form>
                   </li>
                 </ul>
               </li>
               <li class="btn-user btn-login">
                 <a href="#">Вход</a>
                 <ul class="popup-login">
-                  <li>
-                    <section class="modal modal-login">
-                      <h2 class="visually-hidden">Введите свой логин и пароль</h2>
-                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-                        <div class="input-modal">
-                          <label class="visually-hidden" for="user-email">Электронная почта</label>
-                          <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
-                        </div>
-                        <div class="input-modal">
-                          <label class="visually-hidden" for="user-password">Пароль</label>
-                          <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
-                        </div>
-                        <input class="btn login-btn" type="submit" value="Войти">
-                      </form>
-                      <p class="login-password-info">
-                        <a href="#">Забыли пароль?</a>
-                        <a href="#">Новая регистрация</a>
-                      </p>
-                    </section>
+                  <li class="modal modal-login">
+                    <h2 class="visually-hidden">Введите свой логин и пароль</h2>
+                    <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                      <div class="input-modal">
+                        <label class="visually-hidden" for="user-email">Электронная почта</label>
+                        <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                      </div>
+                      <div class="input-modal">
+                        <label class="visually-hidden" for="user-password">Пароль</label>
+                        <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
+                      </div>
+                      <input class="btn login-btn" type="submit" value="Войти">
+                    </form>
+                    <p class="login-password-info">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </p>
                   </li>
                 </ul>
               </li>
               <li class="btn-user btn-basket btn-user-current">
                 <a href="#">2 товара</a>
                 <ul class="popup-basket">
-                  <li>
-                    <section class="modal modal-basket">
-                      <h2 class="visually-hidden">Содержимое корзины</h2>
-                      <table class="modal-table">
-                        <tr class="table-row">
-                          <td>
-                            <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                                <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
-                              </svg>
-                            </button>
-                          </td>
-                          <td class="table-img">
-                            <img src="img/jpeg/product-basket-1.jpg" alt="Миниатюра пломбира с апельсиновым джемом" width="33" height="33">
-                          </td>
-                          <td class="table-text">
-                            Пломбир с апельсиновым джемом
-                          </td>
-                          <td class="table-text">
-                            1,5 кг х <span class="basket-price">200 руб.</span>
-                          </td>
-                          <td class="table-text">
-                            300 руб.
-                          </td>
-                        </tr>
-                        <tr class="table-row">
-                          <td>
-                            <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                                <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
-                              </svg>
-                            </button>
-                          </td>
-                          <td class="table-img">
-                            <img src="img/jpeg/product-basket-2.jpg" alt="Миниатюра клубничного пломбира с присыпкой из белого шоколада" width="33" height="33">
-                          </td>
-                          <td class="table-text">
-                            Клубничный пломбир с присыпкой из белого шоколада
-                          </td>
-                          <td class="table-text">
-                            1,5 кг х <span class="basket-price">300 руб.</span>
-                          </td>
-                          <td class="table-text">
-                            450 руб.
-                          </td>
-                        </tr>
-                      </table>
-                      <p class="total-amount">Итого: 750 руб.</p>
-                      <a class="btn btn-order" href="#">Оформить заказ</a>
-                    </section>
+                  <li class="modal modal-basket">
+                    <h2 class="visually-hidden">Содержимое корзины</h2>
+                    <table class="modal-table">
+                      <tr class="table-row">
+                        <td>
+                          <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                              <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+                            </svg>
+                          </button>
+                        </td>
+                        <td class="table-img">
+                          <img src="img/jpeg/product-basket-1.jpg" alt="Миниатюра пломбира с апельсиновым джемом" width="33" height="33">
+                        </td>
+                        <td class="table-text">
+                          Пломбир с апельсиновым джемом
+                        </td>
+                        <td class="table-text">
+                          1,5 кг х <span class="basket-price">200 руб.</span>
+                        </td>
+                        <td class="table-text">
+                          300 руб.
+                        </td>
+                      </tr>
+                      <tr class="table-row">
+                        <td>
+                          <button class="position-delete" type="button" aria-label="Удалить позицию в корзине">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                              <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+                            </svg>
+                          </button>
+                        </td>
+                        <td class="table-img">
+                          <img src="img/jpeg/product-basket-2.jpg" alt="Миниатюра клубничного пломбира с присыпкой из белого шоколада" width="33" height="33">
+                        </td>
+                        <td class="table-text">
+                          Клубничный пломбир с присыпкой из белого шоколада
+                        </td>
+                        <td class="table-text">
+                          1,5 кг х <span class="basket-price">300 руб.</span>
+                        </td>
+                        <td class="table-text">
+                          450 руб.
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="total-amount">Итого: 750 руб.</p>
+                    <a class="btn btn-order" href="#">Оформить заказ</a>
                   </li>
                 </ul>
               </li>
@@ -164,14 +158,13 @@
               </fieldset>
 
               <fieldset class="filter-form-group">
+                <legend class="filter-form-caption range-data">Цена:
+                  <input type="text" name="starting-price" id="price-from" placeholder="100">
+                  <label for="price-from">руб. -</label>
+                  <input type="text" name="final-price" id="price-up-to" placeholder="500">
+                  <label for="price-up-to">руб.</label>
+                </legend>
                 <div class="input-range">
-                  <div class="range-data">
-                    <legend class="filter-form-caption">Цена:</legend>
-                    <label for="price-from">руб. -</label>
-                    <input type="text" name="starting-price" id="price-from" placeholder="100">
-                    <label for="price-up-to">руб.</label>
-                    <input type="text" name="final-price" id="price-up-to" placeholder="500">
-                  </div>
                   <div class="range">
                     <div class="transparent-line"></div>
                     <div class="white-line"></div>
@@ -241,7 +234,19 @@
                   <img src="img/jpeg/product-1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">310 &#8381;</span>
+                  <span class="price">310</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a1" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a1)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -256,7 +261,19 @@
                   <img src="img/jpeg/product-2.jpg" alt="Сливочно-кофейное мороженое с кусочками шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">380 &#8381;</span>
+                  <span class="price">380</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a2" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a2)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -271,7 +288,19 @@
                   <img src="img/jpeg/product-3.jpg" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">355 &#8381;</span>
+                  <span class="price">355</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a3" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a3)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -286,7 +315,19 @@
                   <img src="img/jpeg/product-4.jpg" alt="Сливочное мороженое крем-брюле с карамельной подливкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">415 &#8381;</span>
+                  <span class="price">415</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a4" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a4)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -301,7 +342,19 @@
                   <img src="img/jpeg/product-5.jpg" alt="Сливочное мороженое с брусничным джемом" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">325 &#8381;</span>
+                  <span class="price">325</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a5" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a5)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -316,7 +369,19 @@
                   <img src="img/jpeg/product-6.jpg" alt="Сливочно-черничное мороженое с цельными ягодами черники " width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">410 &#8381;</span>
+                  <span class="price">410</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a6" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a6)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -331,7 +396,19 @@
                   <img src="img/jpeg/product-7.jpg" alt="Сливочно-лимонное мороженое с карамельной присыпкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">375 &#8381;</span>
+                  <span class="price">375</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a7" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a7)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -346,7 +423,19 @@
                   <img src="img/jpeg/product-8.jpg" alt="Сливочное мороженое с шоколадной стружкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">320 &#8381;</span>
+                  <span class="price">320</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a8" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a8)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -361,7 +450,19 @@
                   <img src="img/jpeg/product-9.jpg" alt="Сливочно-ванильное мороженое с кусочками шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">440 &#8381;</span>
+                  <span class="price">440</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a9" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a9)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -376,7 +477,19 @@
                   <img src="img/jpeg/product-10.jpg" alt="Сливочноe мороженое с ментоловым сиропом" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">435 &#8381;</span>
+                  <span class="price">435</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a10" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a10)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -391,7 +504,19 @@
                   <img src="img/jpeg/product-11.jpg" alt="Сливочное мороженое с кусочками черного шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">355 &#8381;</span>
+                  <span class="price">355</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a11" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a11)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -406,7 +531,19 @@
                   <img src="img/jpeg/product-12.jpg" alt="Сливочное мороженое с мятным сиропом" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">420 &#8381;</span>
+                  <span class="price">420</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a12" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a12)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -474,7 +611,7 @@
 
           <div class="copyright">
             <a class="html=academy=logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
-            <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
+            <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
           </div>
         </footer>
       </div>

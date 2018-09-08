@@ -18,7 +18,7 @@
             <a class="main-header-logo"><img src="img/svg/logo.svg" alt="Логотип Gllacy" width="154" height="64"></a>
             <ul class="menu-list">
               <li class="menu-item">
-                <a href="#">Каталог</a>
+                <a class="menu-item-link" href="#">Каталог</a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-item dropdown-item-new"><a href="#">Новинки</a></li>
                   <li class="dropdown-item"><a href="catalog.html">Сливочное</a></li>
@@ -27,8 +27,8 @@
                   <li class="dropdown-item"><a href="#">Мелорин</a></li>
                 </ul>
               </li>
-              <li class="menu-item"><a href="#">Доставка и оплата</a></li>
-              <li class="menu-item"><a href="#">О Компании</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="#">Доставка и оплата</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="#">О Компании</a></li>
             </ul>
             <ul class="user-list">
               <li class="btn-user btn-search">
@@ -38,40 +38,36 @@
                   </svg>
                 </a>
                 <ul class="popup-search">
-                  <li>
-                    <section class="modal modal-search">
-                      <h2 class="visually-hidden">Введите поисковой запрос</h2>
-                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-                        <label class="visually-hidden" for="input-search">Поиск</label>
-                        <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
-                        <input class="visually-hidden" type="submit" value="Найти">
-                      </form>
-                    </section>
+                  <li class="modal modal-search">
+                    <h2 class="visually-hidden">Введите поисковой запрос</h2>
+                    <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                      <label class="visually-hidden" for="input-search">Поиск</label>
+                      <input class="modal-form-input input-search" id="input-search" type="text" name="search" placeholder="Что ищем?">
+                      <input class="visually-hidden" type="submit" value="Найти">
+                    </form>
                   </li>
                 </ul>
               </li>
               <li class="btn-user btn-login">
                 <a href="#">Вход</a>
                 <ul class="popup-login">
-                  <li>
-                    <section class="modal modal-login">
-                      <h2 class="visually-hidden">Введите свой логин и пароль</h2>
-                      <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
-                        <div class="input-modal">
-                          <label class="visually-hidden" for="user-email">Электронная почта</label>
-                          <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
-                        </div>
-                        <div class="input-modal">
-                          <label class="visually-hidden" for="user-password">Пароль</label>
-                          <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
-                        </div>
-                        <input class="btn login-btn" type="submit" value="Войти">
-                      </form>
-                      <p class="login-password-info">
-                        <a href="#">Забыли пароль?</a>
-                        <a href="#">Новая регистрация</a>
-                      </p>
-                    </section>
+                  <li class="modal modal-login">
+                    <h2 class="visually-hidden">Введите свой логин и пароль</h2>
+                    <form class="form-modal" action="https://echo.htmlacademy.ru" method="POST">
+                      <div class="input-modal">
+                        <label class="visually-hidden" for="user-email">Электронная почта</label>
+                        <input class="modal-form-input" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                      </div>
+                      <div class="input-modal">
+                        <label class="visually-hidden" for="user-password">Пароль</label>
+                        <input class="modal-form-input" id="user-password" type="password" name="password" placeholder="Пароль">
+                      </div>
+                      <input class="btn login-btn" type="submit" value="Войти">
+                    </form>
+                    <p class="login-password-info">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </p>
                   </li>
                 </ul>
               </li>
@@ -129,8 +125,20 @@
                   <img src="img/jpeg/product-1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                    <span class="price">310 &#8381;</span>
-                    <span class="weight">/кг</span>
+                  <span class="price">310</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a1" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a1)"/>
+                  </svg>
+                  <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
                   <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -144,7 +152,19 @@
                   <img src="img/jpeg/product-2.jpg" alt="Сливочно-кофейное мороженое с кусочками шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">380 &#8381;</span>
+                  <span class="price">380</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a2" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a2)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -159,7 +179,19 @@
                   <img src="img/jpeg/product-3.jpg" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">355 &#8381;</span>
+                  <span class="price">355</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a3" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                          <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a3)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -174,7 +206,19 @@
                   <img src="img/jpeg/product-4.jpg" alt="Сливочное крем-брюле мороженое с карамельной подливкой" width="267" height="267">
                 </p>
                 <p class="catalog-item-price">
-                  <span class="price">415 &#8381;</span>
+                  <span class="price">415</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="auto" viewBox="0 0 40 45">
+                    <defs>
+                      <filter id="a4" filterUnits="userSpaceOnUse">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                        <feOffset dy="1" result="offsetBlur"/>
+                        <feFlood flood-color="#313235" flood-opacity=".5"/>
+                        <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                        <feBlend in="SourceGraphic" in2="dropShadow"/>
+                      </filter>
+                    </defs>
+                    <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a4)"/>
+                  </svg>
                   <span class="weight">/кг</span>
                 </p>
                 <p class="catalog-item-desc">
@@ -220,7 +264,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Gllacy Shop на карте</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.8391597702655!2d30.323378819159263!3d59.93874543412418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1536066322138" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.170703350801!2d30.329356125761613!3d59.93902237061496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1536358976514" allowfullscreen></iframe>
         <img class="visually-hidden" src="img/jpeg/map.jpg" alt="Офис компании находится по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <div class="container">
           <div class="map-contacts">
@@ -279,7 +323,7 @@
 
           <div class="copyright">
             <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
-            <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
+            <p>Сделано в <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
           </div>
         </footer>
       </div>
@@ -307,6 +351,8 @@
             </svg>
         </button>
       </section>
+
+      <div class="overlay"></div>
     </div>
   <script src="js/script.js"></script>
   </body>
