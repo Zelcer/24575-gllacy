@@ -7,7 +7,6 @@ link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-feedback-show");
   overlay.classList.add("overlay-show");
-  login.focus();
 });
 
 close.addEventListener("click", function (evt) {

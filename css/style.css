@@ -135,11 +135,11 @@ a {
 }
 
 .modal-form-input:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .modal-form-input:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .form-modal input::placeholder,
@@ -666,7 +666,6 @@ a {
 
 .banner-raspberry {
   background: #6d1122 url("../img/jpeg/crimson-background.jpg") 0 0 no-repeat;
-  background-size: cover;
 }
 
 .banner-choco {
@@ -974,8 +973,8 @@ a {
   border-radius: 25px;
 }
 
-.input-radio input[type="radio"] {
-  display: none;
+.filter-input:focus + label {
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .input-radio label {
@@ -1023,10 +1022,6 @@ input[type="radio"]:checked + label:hover::before {
 
   background-color: rgba(255,255,255,.3);
   border-radius: 25px;
-}
-
-.input-checkbox input[type="checkbox"] {
-  display: none;
 }
 
 .input-checkbox label {
@@ -1530,11 +1525,11 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .dispatch-form input[type="email"]:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .dispatch-form input[type="email"]:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .dispatch-form input[type="email"]::placeholder {
@@ -1548,22 +1543,33 @@ input[type="checkbox"]:checked + label:hover::before {
 
 /*--СТИЛИ ДЛЯ БЛОКА С КАРТОЙ--*/
 .map {
-  height: 430px;
+  position: relative;
 
-  background-image: url("../img/jpeg/map.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%;
+  height: 430px;
 }
 
 .map iframe {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   height: 430px;
 
   border: none;
 }
 
+.map img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 120px;
+
+  display: block;
+}
+
 .map-contacts {
   position: absolute;
+  z-index: 4;
   top: -374px;
   right: 27px;
 
