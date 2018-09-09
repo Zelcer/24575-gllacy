@@ -145,7 +145,7 @@ a {
 
 .form-modal input::placeholder,
 .form-modal textarea::placeholder {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #999999;
@@ -1566,9 +1566,9 @@ input[type="checkbox"]:checked + label:hover::before {
   top: 0;
   left: 50%;
 
-  display: block;
+  margin-left: -600px;
 
-  transform: translateX(-50%);
+  display: block;
 }
 
 .map-contacts {
@@ -1731,12 +1731,20 @@ input[type="checkbox"]:checked + label:hover::before {
   width: 267px;
 }
 
+.form-modal .input-feedback::placeholder {
+  font-size: 16px;
+}
+
 .textaria-feedback {
   width: 428px;
   height: 155px;
   padding: 9px 15px;
 
   resize: none;
+}
+
+.form-modal .textaria-feedback::placeholder {
+  font-size: 16px;
 }
 
 .btn-feedback {
