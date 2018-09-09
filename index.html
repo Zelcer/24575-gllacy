@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -263,7 +263,9 @@
 
       <section class="map" id="map">
         <h2 class="visually-hidden">Gllacy Shop на карте</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.170703350801!2d30.329356125761613!3d59.93902237061496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1536358976514" allowfullscreen></iframe>
+        <!--
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.170703350801!2d30.329356125761613!3d59.93902237061496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1536358976514" allowfullscreen></iframe>
+        -->
         <img src="img/jpeg/map.jpg" alt="Офис компании находится по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <div class="container">
           <div class="map-contacts">
@@ -371,19 +373,8 @@
 
       <div class="overlay"></div>
     </div>
-  <script src="js/script.js"></script>
-<!--
-  <script>
-    function initMap() {
-      var uluru = {lat: 59.938966, lng: 30.323126};
-
-      var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 20, center: uluru});
-
-      var marker = new google.maps.Marker({position: uluru, map: map});
-    }
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNxquB9JT9Lzo-G5x5cq7j0NVHDl2zhx4Co&callback=initMap"></script>
--->
+  <script src="js/script.min.js"></script>
   </body>
 </html>

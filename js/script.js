@@ -3,14 +3,34 @@ var popup = document.querySelector(".modal-feedback");
 var overlay = document.querySelector(".overlay");
 var close = popup.querySelector(".modal-close");
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-feedback-show");
-  overlay.classList.add("overlay-show");
+link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-feedback-show");
+    overlay.classList.add("overlay-show");
 });
 
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-feedback-show");
-  overlay.classList.remove("overlay-show");
+close.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-feedback-show");
+    overlay.classList.remove("overlay-show");
 })
+
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [59.939, 30.326332335998537],
+        zoom: 17
+    });
+
+    var myPlacemark = new ymaps.Placemark([59.938744116548456, 30.323097415344236], {
+        hintContent: 'Gllacy Shop'
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/svg/pin.svg',
+        iconImageSize: [80, 140],
+        iconImageOffset: [-35, -125]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+}

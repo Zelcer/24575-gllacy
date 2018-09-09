@@ -128,7 +128,8 @@ a {
   line-height: 24px;
 
   background-color: #ffffff;
-  border: solid 1px rgba(178, 178, 178, 0.52);
+  border: 0;
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
 
   outline: none;
@@ -1520,7 +1521,8 @@ input[type="checkbox"]:checked + label:hover::before {
 
   border-radius: 5px;
   background-color: #ffffff;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 0;
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
   outline: none;
 }
 
@@ -1562,15 +1564,17 @@ input[type="checkbox"]:checked + label:hover::before {
   position: absolute;
   z-index: 0;
   top: 0;
-  left: 120px;
+  left: 50%;
 
   display: block;
+
+  transform: translateX(-50%);
 }
 
 .map-contacts {
   position: absolute;
   z-index: 4;
-  top: -374px;
+  top: 63px;
   right: 27px;
 
   width: 252px;
