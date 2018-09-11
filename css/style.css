@@ -429,7 +429,7 @@ a {
 
 .popup-search {
   position: absolute;
-  top: 37px;
+  top: 40px;
   right: 13px;
   z-index: 1;
 
@@ -1844,7 +1844,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .btn-order {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 10px 14px 14px 16px;
+  padding: 10px 14px 11px 16px;
 }
 
 /*--СТИЛИ ДЛЯ OVERLAY--*/
