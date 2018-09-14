@@ -1109,7 +1109,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 /*--СТИЛИ ДЛЯ КАТАЛОГА--*/
 .catalog-hit {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 
 .catalog {
@@ -1132,7 +1132,7 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .creamy-catalog {
-  margin-bottom: 42px;
+  margin-bottom: 46px;
 }
 
 .creamy-catalog .catalog-item {
@@ -1165,7 +1165,10 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .catalog-img-item {
+  width: 267px;
+  height: 267px;
   margin: 0;
+  margin-bottom: 13px;
 }
 
 .catalog-item-price {
@@ -1176,7 +1179,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .price {
   position: absolute;
-  bottom: 27px;
+  bottom: 25px;
   left: -1px;
 
   font-size: 45px;
@@ -1186,7 +1189,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .catalog-item-price svg {
   position: absolute;
-  bottom: 25px;
+  bottom: 24px;
   left: 75px;
 
   display: block;
@@ -1196,7 +1199,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .weight {
   position: absolute;
-  bottom: 22px;
+  bottom: 21px;
   left: 112px;
 
   font-size: 30px;
@@ -1291,7 +1294,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .pagination-prev::before {
   position: absolute;
   top: 7px;
-  left: 2px;
+  left: 0;
 
   content: "";
   display: block;
@@ -1304,7 +1307,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .pagination-next::before {
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 17px;
 
   content: "";
@@ -1689,7 +1692,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .login-password-info a {
   display: block;
-  width: 119px;
+  width: 120px;
   padding: 0;
 
   font-size: 13px;
