@@ -52,6 +52,7 @@ window.addEventListener("keydown", function(evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal-feedback-show")) {
       popup.classList.remove("modal-feedback-show");
+      overlay.classList.remove("overlay-show");
     }
   }
 });
