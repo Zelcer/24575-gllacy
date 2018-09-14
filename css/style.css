@@ -57,6 +57,7 @@ body {
 .wrapper-catalog {
   background-color: #849D8F;
   background-image: none;
+  background: linear-gradient(to bottom, rgba(153, 174, 162, 1), rgba(132, 157, 143, 1));
 }
 
 .main-container {
