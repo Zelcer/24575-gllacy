@@ -424,8 +424,8 @@ a {
   border-radius: 50%;
 }
 
-.btn-search:hover a path,
-.btn-search:focus a path {
+.btn-search:hover path,
+.btn-search:focus path {
   fill: #000000;
 }
 
@@ -1040,8 +1040,8 @@ input[type="radio"]:checked + label:hover::before {
 
 .input-checkbox label::before {
   position: absolute;
-  top: -3px;
-  left: 5px;
+  top: -2px;
+  left: 8px;
 
   content: "";
   width: 25px;
@@ -1143,8 +1143,6 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .catalog-item img {
-  margin-bottom: 8px;
-
   border-radius: 50%;
 }
 
@@ -1161,6 +1159,20 @@ input[type="checkbox"]:checked + label:hover::before {
   margin: 0;
 }
 
+.catalog-item-price::before {
+  position: absolute;
+  top: -69px;
+  left: 75px;
+  content: "";
+
+  display: block;
+  width: 40px;
+  height: 45px;
+
+  background-image: url("../img/svg/ruble.svg");
+  background-repeat: no-repeat;
+}
+
 .price {
   position: absolute;
   bottom: 25px;
@@ -1169,16 +1181,6 @@ input[type="checkbox"]:checked + label:hover::before {
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
-}
-
-.catalog-item-price svg {
-  position: absolute;
-  bottom: 24px;
-  left: 75px;
-
-  display: block;
-  width: 40px;
-  height: auto;
 }
 
 .weight {
@@ -1360,7 +1362,7 @@ input[type="checkbox"]:checked + label:hover::before {
   padding: 26px 27px 24px 20px;
   margin-bottom: 40px;
 
-  background: #ede1c8 url("../img/jpeg/waffle-pattern.jpg") 0 0 repeat;
+  background: #ede1c8 url("../img/jpeg/waffle-pattern.jpg") center repeat;
   border-radius: 15px;
 }
 
